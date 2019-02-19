@@ -92,8 +92,8 @@
                             @endif
                             <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal"
                                data-target="#newFolderModal"><i class="fa fa-plus-circle"></i> 新建目录</a>
-                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal"
-                                   data-target="#directLinkModal"><i class="fa fa-link"></i> 导出直链</a>
+                            <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal"
+                               data-target="#directLinkModal"><i class="fa fa-link"></i> 导出直链</a>
                         </div>
                         <div class="modal fade" id="newFolderModal" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -224,7 +224,7 @@
         </div>
     </div>
     <div>
-        {{ $items->appends(['limit' => request()->get('limit')])->links('default.page') }}
+        {{ $items->appends(['limit' => request()->get('limit'),'orderBy'=> request()->get('orderBy')])->links('default.page') }}
     </div>
     @if ($hasImage && (int)\App\Helpers\Tool::config('image_view'))
         <div class="card border-light mb-3">

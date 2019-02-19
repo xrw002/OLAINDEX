@@ -110,7 +110,8 @@
         <form action="" method="post">
             @csrf
             <textarea name="content" id="mde" class="mdui-invisible"></textarea>
-            <button id="submit_btn" class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" type="submit"><i
+            <button id="submit_btn" class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" type="submit">
+                <i
                     class="mdui-icon material-icons">check</i> 保存
             </button>
         </form>
